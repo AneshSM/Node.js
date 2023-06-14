@@ -1,39 +1,74 @@
 import db from "./db.json" assert { type: "json" };
 import userDatabase from "./utils.js";
+
+// *** GET all users data ***
 const fetchUsers = () => {
-  return db.users;
+  try {
+    return db.users;
+  } catch (error) {
+    throw { status: 500, message: error };
+  }
 };
 
-const createUser = (newUser) => {
-  const userExists =
-    db.users.findIndex((data) => data.userName === newUser.userName) > -1;
-  if (userExists) return;
-  db.users.push(newUser);
-  userDatabase.saveToDatabase(db);
-  return newUser;
-};
-
+// *** GET one user data ***
 const fetchUser = (uid) => {
-  const user = db.users.find((data) => data.id === uid);
-  if (!user) return null;
-  return user;
+  try {
+    const user = db.users.find((data) => data.id === uid);
+    if (!user) {
+      throw {
+        status: 400,
+        mmessage: `User ${newUser.name} data  doesn't exists`,
+      };
+    }
+    return user;
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
 };
 
+//  *** POST one user data ***
+const createUser = (newUser) => {
+  try {
+    const userExists =
+      db.users.findIndex((data) => data.email === newUser.email) > -1;
+    if (userExists) {
+      throw {
+        status: 400,
+        mmessage: `User ${newUser.name} data already exists`,
+      };
+    }
+    db.users.push(newUser);
+    userDatabase.saveToDatabase(db);
+    return newUser;
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
+};
+
+// ***  DELETE one user data ***
 const deleteUser = (uid) => {
-  const findUserDataIndex = db.users.findIndex((data) => data.id === uid);
-  db.users.splice(findUserDataIndex, 1);
+  try {
+    const findUserDataIndex = db.users.findIndex((data) => data.id === uid);
+    db.users.splice(findUserDataIndex, 1);
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
 };
 
+//  *** PATCH one user data ***
 const updateUser = (uid, changes) => {
-  const findUserDataIndex = db.users.findIndex((data) => data.id === uid);
-  const userData = {
-    ...db.users[findUserDataIndex],
-    ...changes,
-    updateAt: new Date().toString("en-US", { timeZone: "UTC" }),
-  };
-  db.users[findUserDataIndex] = userData;
-  userDatabase.saveToDatabase(db);
-  return userData;
+  try {
+    const findUserDataIndex = db.users.findIndex((data) => data.id === uid);
+    const userData = {
+      ...db.users[findUserDataIndex],
+      ...changes,
+    };
+    db.users[findUserDataIndex] = userData;
+    userDatabase.saveToDatabase(db);
+    return userData;
+  } catch (error) {
+    throw { status: error?.status || 500, message: error?.message || error };
+  }
 };
 
 export default { fetchUsers, createUser, fetchUser, deleteUser, updateUser };

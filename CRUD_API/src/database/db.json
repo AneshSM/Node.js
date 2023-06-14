@@ -1,50 +1,42 @@
 {
   "users": [
     {
-      "id": "61dbae02-c147-4e28-863c-db7bd402b2d6",
-      "userName": "Tommy_V",
-      "name": "Tommy V",
-      "age": 20,
-      "phoneNo": 9999999999,
-      "createdAt": "4/20/2022, 2:21:56 PM",
-      "updatedAt": "4/20/2022, 2:21:56 PM"
+      "id": "12a410bc-849f-4e7e-bfc8-4ef283ee4b19",
+      "name": "Jean Miller",
+      "gender": "female",
+      "dateOfBirth": "23/04/1990",
+      "email": "jason@mail.com",
+      "password": "666349420ec497c1dc890c45179d44fb13220239325172af02d1fb6635922956"
     },
     {
-      "id": "4a3d9aaa-608c-49a7-a004-66305ad4ab50",
-      "userName": "David200",
-      "name": "David",
-      "age": 25,
-      "phoneNo": 8888888888,
-      "createdAt": "1/25/2022, 1:15:44 PM",
-      "updatedAt": "3/10/2022, 8:21:56 AM"
+      "id": "2b9130d4-47a7-4085-800e-0144f6a46059",
+      "name": "Tiffany Brookston",
+      "gender": "female",
+      "dateOfBirth": "09/06/1996",
+      "email": "tiffy@mail.com",
+      "password": "8a1ea5669b749354110dcba3fac5546c16e6d0f73a37f35a84f6b0d7b3c22fcc"
     },
     {
-      "id": "d8be2362-7b68-4ea4-a1f6-03f8bc4eede7",
-      "userName": "Harry_rt",
-      "name": "Harry",
-      "age": 30,
-      "phoneNo": 8888888888,
-      "createdAt": "11/20/2021, 5:39:07 PM",
-      "updatedAt": "11/20/2021, 5:39:07 PM"
+      "id": "11817fb1-03a1-4b4a-8d27-854ac893cf41",
+      "name": "Catrin Stevenson",
+      "gender": "female",
+      "dateOfBirth": "17/08/2001",
+      "email": "catrin@mail.com",
+      "password": "18eb2d6c5373c94c6d5d707650d02c3c06f33fac557c9cfb8cb1ee625a649ff3"
     },
     {
-      "userName": "Rock_V",
-      "name": "Rock",
-      "age": 30,
-      "phoneNo": 7777777777,
-      "id": "2a6362f2-ba95-4f09-9dc7-5c3375af2f30",
-      "createdAt": "Tue Jun 13 2023 16:28:16 GMT+0530 (India Standard Time)",
-      "updatedAt": "Tue Jun 13 2023 16:28:16 GMT+0530 (India Standard Time)"
-    },
+      "id": "6a89217b-7c28-4219-bd7f-af119c314159",
+      "name": "Greg Bronson",
+      "gender": "male",
+      "dateOfBirth": "08/04/1993",
+      "email": "greg@mail.com",
+      "password": "a6dcde7eceb689142f21a1e30b5fdb868ec4cd25d5537d67ac7e8c7816b0e862"
+    }
+  ],
+  "orders": [
     {
-      "userName": "muthu_V",
-      "name": "muthu",
-      "age": 24,
-      "phoneNo": 222222255554444,
-      "id": "43bc1392-ab87-44c5-96ad-8e9c83301d77",
-      "createdAt": "Tue Jun 13 2023 18:04:47 GMT+0530 (India Standard Time)",
-      "updatedAt": "Tue Jun 13 2023 18:04:47 GMT+0530 (India Standard Time)",
-      "updateUser": "Tue Jun 13 2023 18:11:58 GMT+0530 (India Standard Time)"
+      "uid": "",
+      "order": ""
     }
   ]
 }
