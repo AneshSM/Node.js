@@ -1,0 +1,20 @@
+.container {
+  width: fit-content;
+}
+input {
+  padding: 5px;
+  width: 100%;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+.edit {
+  background-color: rgb(151, 151, 21);
+}
+.close-btn {
+  background-color: tomato;
+}

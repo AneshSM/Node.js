@@ -9,10 +9,12 @@ const {
 
 const router = express.Router();
 
+// *** express routes for CRUD ***
+
 router.get("/", getAllData);
 router.get("/:todo_id", getData);
 router.post("/", putData);
-router.delete("/", deleteData);
-router.patch("/", updateData);
+router.delete("/:todo_id", deleteData);
+router.patch("/:todo_id", updateData);
 
 module.exports = router;

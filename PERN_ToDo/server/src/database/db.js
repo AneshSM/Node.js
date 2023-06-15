@@ -1,5 +1,7 @@
+// *** PostgreSQL api ***
 const Pool = require("pg").Pool;
 
+// *** configure  database and user credential ***
 const pool = new Pool({
   user: "postgres",
   password: "AnePsql204",

@@ -1,0 +1,31 @@
+.input-container {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.input-container > input {
+  padding: 5px;
+  width: 20rem;
+}
+.input-container > button {
+  padding: 5px;
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+.edit {
+  background-color: rgb(8, 83, 8);
+}
+.delete {
+  background-color: tomato;
+}
