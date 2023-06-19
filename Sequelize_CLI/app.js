@@ -1,5 +1,5 @@
 const express = require("express");
-const { sequelize, User } = require("./models");
+const { sequelize } = require("./models");
 const app = express();
 
 const usersRouter = require("./routers/users_router");
@@ -13,7 +13,7 @@ app.use("/users", usersRouter);
 app.use("/posts", postsRouter);
 
 app.listen({ port: PORT }, async () => {
-  console.log("The server up on http://localho  st:5000");
+  console.log("The server up on http://localhost:5000");
   await sequelize.authenticate();
   console.log("Database connected!");
 });
