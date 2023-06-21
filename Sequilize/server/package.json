@@ -10,7 +10,7 @@
     "db": "nodemon ./models/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Anesh",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
