@@ -6,6 +6,7 @@ const pool = require("../database/db");
 const getAllData = async (req, res) => {
   try {
     const all_todo = await pool.query("SELECT * FROM todo");
+
     res.json(all_todo.rows);
   } catch (error) {
     res
